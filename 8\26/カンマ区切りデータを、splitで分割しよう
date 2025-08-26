@@ -1,0 +1,24 @@
+演習１
+# coding: utf-8
+#文字列をカンマで分割する
+
+team_str = "勇者,戦士,忍者,魔法使い"
+team_array = team_str.split(",")
+print(team_array)
+
+演習２
+# coding: utf-8
+#英文の単語数を数える
+
+str = "One cold rainy day when my father was a little boy he met an old alley cat on his street"
+word = str.split(" ")
+print(len(word))
+
+演習３
+# coding: utf-8
+# 標準入力から読み込んだURLを分割する
+# https://paiza.jp/cgc/users/ready
+
+url_str = input().rstrip()
+url = url_str.split("/")
+print(url)
