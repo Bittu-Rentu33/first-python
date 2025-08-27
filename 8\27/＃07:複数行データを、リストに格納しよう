@@ -1,3 +1,12 @@
+# 複数行データをリストに格納する
+
+import sys
+array = []
+for line in sys.stdin.readlines():
+    array.append(line.rstrip())
+    #print(line.rstrip())
+print(array)
+
 演習１
 右のコードエリアのプログラムは、RPGの敵の名前を、入力エリアから複数行データとして読み込んで出力します。
 この文字列を、「＊＊が現れた」という形式で出力してください。
@@ -21,6 +30,12 @@
 魔王が現れた
 
 コード
+# coding: utf-8
+# 読み込んだ複数行を出力する
+
+import sys
+for line in sys.stdin.readlines():
+	print(line.rstrip() + "が現れた")
 
 
 演習２
@@ -47,3 +62,11 @@
 魔王が1匹現れた
 
 コード
+# coding: utf-8
+# 複数行のカンマ区切りデータを出力する
+
+import sys
+for line in sys.stdin.readlines():
+	# ここに、文字列を分割して、出力するコードを書く
+	enemy = line.rstrip().split(",")
+	print(enemy[0] + "が" + enemy[1] + "匹現れた")
