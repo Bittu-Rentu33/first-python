@@ -1,41 +1,5 @@
 # javaとpython　基礎練習
 使用ツールpaiza
 
-day1(8/18)
-07:西暦年と平成年の対応表を作ろう
-演習1
-# coding: utf-8
-# 西暦年と昭和年の対応表
-# 1926年から1988年までをループで出力
-# ループ内で、各西暦年を昭和年に変換
-for seireki in range(1926, 1988 + 1):
-    print("西暦" + str(seireki) + "年は" , end = "")
-    syowa = seireki - 1925
-    print("昭和" + str(syowa) + "年です")
 
-演習2
-正解コード
-# coding: utf-8
-# 特定期間の西暦年と昭和年の対応表を作る
-# 1行目：開始年
-# 2行目：期間
-# 昭和年 = 西暦年 - 1925
-# 出力：西暦XXXX年は、昭和YY年です。
-
-start = int(input())
-term = int(input())
-
-for seireki in range(start, start + term):
-    print("西暦" + str(seireki) + "年は", end = "")
-    shouwa = seireki - 1925
-    print("昭和" + str(shouwa) + "年です")
-
-間違いコード
-10 = int(input())
-for i in range(10):
-    s = input().rstrip().split(' ')
-for seireki in range(1926, 1988 + 1):
-    print("西暦" + str(seireki) + "年は" , end = "")
-    showa = seireki - 1925
-    print("昭和" + str(showa) + "年です")
     
