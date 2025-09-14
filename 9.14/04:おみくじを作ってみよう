@@ -1,0 +1,18 @@
+演習１
+右側のコードエリアのプログラムをもとに、プログラムを完成させてください。
+
+omikuji の中には、1~100までの数字がランダムで
+代入されます。
+
+omikuji の数字が30~100の時は「omikujiの中身は○○なので大吉」と表示、
+omikuji の数字が29以下の時は「omikujiの中身は○○なので大凶」と表示する。
+例）omikujiの中身は32なので大吉
+
+# coding: utf-8
+import random
+omikuji = random.randint(1, 100)
+
+if omikuji > 29:
+	print("omikujiの中身は" + str(omikuji) + "なので大吉")
+else:
+	print("omikujiの中身は" + str(omikuji) + "なので大凶")
