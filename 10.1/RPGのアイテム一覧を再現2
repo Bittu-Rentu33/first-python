@@ -1,0 +1,87 @@
+# coding: utf-8
+# Your code here!
+
+# 画像用辞書
+item_images = {
+    "剣":"http://paiza.jp/learning/images/sword.png",
+    "盾":"http://paiza.jp/learning/images/shield.png",
+    "回復薬":"http://paiza.jp/learning/images/potion.png",
+    "クリスタル":"http://paiza.jp/learning/images/crystal.png"
+}
+
+# アイテムの並び順配列
+item_orders = ["クリスタル", "回復薬", "盾", "剣", "回復薬", "回復薬"]
+
+# print(item_images)
+# print(item_orders)
+
+# アイテム名を取り出す
+for item_name in item_orders:
+# 画像ファイル名を取り出す
+    print("<img src='" + item_images[item_name] + "'>")
+    print(item_name + "<br>")
+
+
+演習１
+演習課題「画像を順番に出力する」
+
+右側のエディターエリアのプログラムを元に、items_imgesリストをitems_ordersリストの順に、
+1行づつHTMLで画像を表示してみましょう。
+
+HTMLで画像を1行ずつ表示する場合は以下のようにimgタグを利用します。
+<img src='URL'><br>
+
+ # 画像用辞書
+items_imges = {
+    "剣" : "http://paiza.jp/learning/images/sword.png",
+    "盾" : "http://paiza.jp/learning/images/shield.png",
+    "回復薬" : "http://paiza.jp/learning/images/potion.png",
+    "クリスタル" : "http://paiza.jp/learning/images/crystal.png"
+}
+
+# アイテムの並び順リスト
+items_orders = ["剣", "盾", "回復薬", "クリスタル"]
+
+# ここから下を記述しよう
+# 画像ファイル名を取り出す
+for item_name in items_orders:
+    print("<img src='"+ items_imges[item_name] + "'><br>")
+
+演習２
+演習課題「アイテムリストを作ってみよう」
+
+右側のエディターエリアのプログラムを元に、アイテムリストを作ってみましょう。
+標準入力で出力するアイテム数と複数行のアイテム名の入力があります。
+それを元に、items_imgesで定義された画像を改行せず順番に出力してみましょう。
+画像の出力にはimgタグを使い、src属性に画像のファイル名を指定します。
+
+※標準入力で与えられるアイテム名は、items_imgesに無いアイテムは
+出てこないものとします。
+
+ 入力される値
+
+6
+回復薬
+盾
+クリスタル
+クリスタル
+剣
+剣
+
+# 画像用辞書
+items_imges = {
+    "剣" : "http://paiza.jp/learning/images/sword.png",
+    "盾" : "http://paiza.jp/learning/images/shield.png",
+    "回復薬" : "http://paiza.jp/learning/images/potion.png",
+    "クリスタル" : "http://paiza.jp/learning/images/crystal.png"
+}
+
+# ここから下を記述しよう
+# 出力するアイテム数を変数に代入
+item_cnt = int(input())
+
+# 標準入力にあるアイテムを出力する
+while item_cnt > 0:
+  item = input()
+  print("<img src = '" + items_imges[item] + "'>")
+  item_cnt = item_cnt - 1
