@@ -1,0 +1,43 @@
+# coding: utf-8
+# Your code here!
+
+# 2次元リストをmapで作成する
+
+numbers = [i * 2 for i in range(10)]
+print(numbers)
+print(len(numbers))
+
+numbers2 = [[1 for i in range(3)] for j in range(4)]
+numbers2[0][1] = 2
+print(numbers2)
+
+演習１
+演習課題「forでリストを作成してみよう」
+
+右のコードエリアで、forを使って、要素数が5、初期値が"paiza"というリストを作成して、print関数で出力してください。
+
+プログラムを実行して、正しく出力されれば演習課題クリアです！
+
+ 期待する出力値
+
+['paiza', 'paiza', 'paiza', 'paiza', 'paiza']
+
+ans = ["paiza" for i in range(5)]
+print(ans)
+
+演習２
+演習課題「2次元リストを作成してみよう」
+
+右のコードエリアで、forを使って、次のような2次元リストを作成して、print関数で出力してください。
+
+・要素数は、5個
+・[7,7,7,7]というリストを要素にする
+
+プログラムを実行して、正しく出力されれば演習課題クリアです！
+
+ 期待する出力値
+
+[[7, 7, 7, 7], [7, 7, 7, 7], [7, 7, 7, 7], [7, 7, 7, 7], [7, 7, 7, 7]]
+
+numbers = [[7 for i in range(4)] for j in range(5)]
+print(numbers)
