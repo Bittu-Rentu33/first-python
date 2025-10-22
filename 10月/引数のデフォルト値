@@ -1,0 +1,83 @@
+
+# 引数のデフォルト値
+
+def introduce(greeting, name = "村人"):
+    print("私は" + name + "です。" + greeting)
+
+introduce("こんにちは", "勇者")
+introduce("こんにちは")
+
+# 可変長引数
+
+def introduce(greeting, *names):
+    for name in names:
+        print("私は" + name + "です。" + greeting)
+
+introduce("こんにちは", "勇者", "村人", "兵士")
+
+# 可変長引数 - 辞書
+
+def introduce(**people):
+    for name, greeting in people.items():
+        print("私は" + name + "です。" + greeting)
+
+introduce(hero = "はじめまして", villager = "こんにちは", soldier = "よろしくお願いします")
+
+演習1
+ 演習課題「引数のデフォルト値」
+
+右のコードには、say_hello関数が、デフォルト値を持った引数として定義してあります。
+この関数を呼び出して、「hello paiza」と表示してください。
+
+プログラムを実行して、正しく出力されれば演習課題クリアです！
+
+ 期待する出力値
+
+hello paiza
+
+# 引数のデフォルト値
+
+def say_hello(target = "paiza"):
+    print("hello " + target)
+
+# この下に関数呼び出しを記述する
+say_hello("paiza")
+
+演習２
+演習課題「RPGの戦闘シーン」
+
+右のコードエリアには、RPGの攻撃シーンを表示するプログラムがありますが、実行するとエラーになってしまいます。
+enemies要素の順番に「戦士はxxxと戦った」と表示するようにしてください。
+
+間違いを修正して、正しく出力されれば演習課題クリアです！
+
+# RPGの戦闘シーン
+
+def battle(greething, *enemies):
+	for enemy in enemies:
+		print("戦士は" + enemy + "と戦った" )
+
+battle("こんにちは", "スライム", "モンスター", "ドラゴン")
+
+
+ 期待する出力値
+
+戦士はスライムと戦った
+戦士はモンスターと戦った
+戦士はドラゴンと戦った
+
+# RPGの戦闘シーン
+
+def battle(greething, *enemies):
+	for enemy in enemies:
+		print("戦士は" + enemy + "と戦った" )
+
+battle("こんにちは", "スライム", "モンスター", "ドラゴン")
+
+# RPGの戦闘シーン
+
+def battle(*enemies):
+	for enemy in enemies:
+		print("戦士は" + enemy + "と戦った")
+
+battle("スライム", "モンスター", "ドラゴン")
