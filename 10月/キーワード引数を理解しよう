@@ -1,0 +1,64 @@
+# キーワード引数
+
+def say_hello(greeting = "hello", target = "world"):
+    print(greeting + " " + target)
+
+say_hello()
+say_hello("こんにちは", "皆さん")
+say_hello("good morning!")
+say_hello(greeting = "ネコ先生", target = "皆さん")
+say_hello(target = "ネコ先生", greeting = "おはようございます")
+say_hello(target = "ネコ先生")
+say_hello(greeting = "おはようございます")
+
+演習１
+演習課題「キーワード引数 その１」
+
+右のコードには、introduce関数が、キーワード引数として定義してあります。
+この関数を呼び出して、「私は村人です」と表示してください。
+
+プログラムを実行して、正しく出力されれば演習課題クリアです！
+
+ 期待する出力値
+
+私は村人です
+
+# キーワード引数
+
+def introduce(name = "私は", role = "村人"):
+    print(name + role + "です")
+
+# この下に、必要な処理を記述する
+introduce()
+
+
+
+演習２
+演習課題「キーワード引数 その2」
+
+右のコードには、introduce関数が、キーワード引数として定義してあります。
+この関数を呼び出して、「私は戦士です」と表示してください。
+
+プログラムを実行して、正しく出力されれば演習課題クリアです！
+
+ 期待する出力値
+
+私は戦士です
+
+自分
+# キーワード引数
+
+def introduce(name = "私は", role = "村人"):
+    print(name + role + "です")
+
+# この下に、必要な処理を記述する
+introduce("私は"、"戦士")
+
+答
+# キーワード引数
+
+def introduce(name = "私は", role = "村人"):
+    print(name + role + "です")
+
+# 関数呼び出しを記述する
+introduce(role = "戦士")
