@@ -1,0 +1,103 @@
+# coding: utf-8
+# クラスを作成する
+
+class Player:
+    def walk(self):
+        print("勇者は荒野を歩いていた")
+
+    def attack(self, enemy):
+        print("勇者は" + enemy + "を攻撃した")
+
+player1 = Player()
+player1.walk()
+player1.attack("スライム")
+
+
+演習課題「クラスからオブジェクトを作成しよう」
+
+右のコードにて、Greetingクラスに、メッセージを表示するsay_helloメソッドが定義されています。
+このクラスからオブジェクトを作成して、say_helloメソッドを呼び出し、メッセージを表示してください。
+
+プログラムを実行して、正しく出力されれば演習課題クリアです！
+
+ 期待する出力値
+
+hello paiza
+
+# coding: utf-8
+# クラスからオブジェクトを作成しよう
+
+class Greeting:
+    def say_hello(self):
+        print("hello paiza")
+
+# この下に、必要なコードを追加してください
+Greeting1 = Greeting(say_hello)
+
+答
+# coding: utf-8
+# クラスからオブジェクトを作成しよう
+
+class Greeting:
+    def say_hello(self):
+        print("hello paiza")
+
+# この下に、オブジェクトを作成し、メソッド呼び出しを記述する
+paiza = Greeting()
+paiza.say_hello()
+
+習課題「クラスにメソッドを定義しよう」
+
+右のコードにて、Greetingクラスのsay_helloメソッドを呼び出していますが、
+Greetingクラス内に、メソッドが記述されていません。
+期待する出力値を表示するよう、メソッドにコードを追加してください。
+
+プログラムを実行して、正しく出力されれば演習課題クリアです！
+
+ 期待する出力値
+
+hello python
+
+# coding: utf-8
+# クラスにメソッドを定義しよう
+
+class Greeting:
+    # この下に、必要なコードを追加してください
+    def say_hello(self):
+        print("hello python")
+
+paiza = Greeting()
+paiza.say_hello()
+
+
+演習課題「間違い探し」
+
+右のコードでは、say_helloメソッドを呼び出していますが、エラーになってしまいます。
+間違いを修正して、「hello paiza」と表示されるようにしてください。
+
+プログラムを実行して、正しく出力されれば演習課題クリアです！
+
+ 期待する出力値
+
+hello paiza
+
+# coding: utf-8
+# 間違い探し
+
+class Greeting
+    def say_hello(self)
+        print("hello paiza")
+
+paiza = Greeting()
+paiza.say_hello()
+
+答
+# coding: utf-8
+# 間違い探し
+
+class Greeting:
+    def say_hello(self):
+        print("hello paiza")
+
+paiza = Greeting()
+paiza.say_hello()
